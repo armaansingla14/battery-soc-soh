@@ -62,8 +62,8 @@ class SocEkf:
     """
 
     def __init__(self, params: EcmEstimatorParams, ocv: OcvCurve, z0: float, dt: float = 1.0,
-                 p0_soc: float = 0.05 ** 2, current_sigma: float = 0.05, voltage_sigma: float = 0.01,
-                 rc_sigma: float = 1e-3):
+                 p0_soc: float = 0.05 ** 2, current_sigma: float = 0.2, voltage_sigma: float = 0.01,
+                 rc_sigma: float = 1e-4):
         self.p = params
         self.ocv = ocv
         self.dt = dt
