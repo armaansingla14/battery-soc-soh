@@ -59,6 +59,11 @@ class SocEkf:
     Measurement:          V = OCV(z) - R0(z) I - sum v_i
     Because the process Jacobian is diagonal, the covariance prediction is an
     element-wise product, which keeps the per-sample cost low.
+
+    ``current_sigma`` is deliberately larger than the sensor's white noise: it
+    also has to cover the unmodelled current offset/gain error and capacity
+    error, otherwise the SOC variance collapses and voltage errors end up in
+    the RC states instead of correcting SOC.
     """
 
     def __init__(self, params: EcmEstimatorParams, ocv: OcvCurve, z0: float, dt: float = 1.0,
