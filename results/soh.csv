@@ -1,0 +1,4 @@
+model,n_train,n_test,mae_pct,rmse_pct,max_abs_pct,coverage_95,mean_std_pct
+GPR (ARD RBF + white),505,303,1.65257,2.15644,5.07859,0.267327,0.589372
+linear regression,505,303,0.501143,0.603774,1.45781,,
+cycle-count fade curve,505,303,2.21385,2.56267,5.76687,,
