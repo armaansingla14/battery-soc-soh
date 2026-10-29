@@ -1,0 +1,13 @@
+[project]
+name = "batterysoc"
+version = "0.1.0"
+description = "Battery SOC/SOH estimation: equivalent circuit models, Coulomb counting, EKF and Gaussian process regression"
+requires-python = ">=3.10"
+dependencies = ["numpy", "scipy", "scikit-learn"]
+
+[tool.setuptools.packages.find]
+where = ["python"]
+
+[tool.pytest.ini_options]
+pythonpath = ["python"]
+testpaths = ["python/tests"]

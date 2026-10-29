@@ -1,0 +1,11 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+build/
+node_modules/
+data/
+*.npz
+*.npy
+.vscode/
